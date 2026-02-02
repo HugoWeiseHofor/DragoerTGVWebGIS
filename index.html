@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="map-logo">
+                <img src="resources/HOFOR_Logo_Positiv.svg" alt="Logo" />
+            </div>
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="layers/PlanfladeSpildevand.js"></script><script src="layers/ProjektfladeSpildevand.js"></script><script src="layers/ProjektfladeVand.js"></script><script src="layers/Antropogentlandskab.js"></script><script src="layers/S.js"></script><script src="layers/Marinflade.js"></script><script src="layers/Trlagtmarintforland.js"></script><script src="layers/Bundmorneflade.js"></script><script src="layers/TerrnnrtgrundvandsommermiddelmunderterrnHIP.js"></script><script src="layers/TerrnnrtgrundvandvintermiddelmunderterrnHIP.js"></script><script src="layers/RisikoforstningsskaderGEO.js"></script><script src="layers/RisikoforoversvmmelseKystdirektoratet.js"></script><script src="layers/Risikoforhavvandsindsivning.js"></script><script src="layers/Boringerdybdeim.js"></script><script src="layers/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16.js"></script><script src="layers/Vandlb100mbuffer.js"></script><script src="layers/Vandlb20mbuffer.js"></script><script src="layers/Vandlb10mbuffer.js"></script><script src="layers/Vandlb2mbuffer.js"></script><script src="layers/Vandlb.js"></script><script src="layers/Ser100mbuffer.js"></script><script src="layers/Ser20mbuffer.js"></script><script src="layers/Ser10mbuffer.js"></script><script src="layers/Ser2mbuffer.js"></script><script src="layers/Ser.js"></script><script src="layers/Jordforureningvidenniveau2V2.js"></script><script src="layers/Jordforureningvidenniveau1V1.js"></script><script src="layers/HabitatOmrde.js"></script><script src="layers/Frededeomrder.js"></script><script src="layers/EngeogMoser18701899.js"></script><script src="layers/Gammelkystlinje18701899.js"></script><script src="layers/Ingenkloakering.js"></script><script src="layers/Dragr.js"></script>
+        <script src="styles/PlanfladeSpildevand_style.js"></script><script src="styles/ProjektfladeSpildevand_style.js"></script><script src="styles/ProjektfladeVand_style.js"></script><script src="styles/Antropogentlandskab_style.js"></script><script src="styles/S_style.js"></script><script src="styles/Marinflade_style.js"></script><script src="styles/Trlagtmarintforland_style.js"></script><script src="styles/Bundmorneflade_style.js"></script><script src="styles/TerrnnrtgrundvandsommermiddelmunderterrnHIP_style.js"></script><script src="styles/TerrnnrtgrundvandvintermiddelmunderterrnHIP_style.js"></script><script src="styles/RisikoforstningsskaderGEO_style.js"></script><script src="styles/RisikoforoversvmmelseKystdirektoratet_style.js"></script><script src="styles/Risikoforhavvandsindsivning_style.js"></script><script src="styles/Boringerdybdeim_style.js"></script><script src="styles/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_style.js"></script><script src="styles/Vandlb100mbuffer_style.js"></script><script src="styles/Vandlb20mbuffer_style.js"></script><script src="styles/Vandlb10mbuffer_style.js"></script><script src="styles/Vandlb2mbuffer_style.js"></script><script src="styles/Vandlb_style.js"></script><script src="styles/Ser100mbuffer_style.js"></script><script src="styles/Ser20mbuffer_style.js"></script><script src="styles/Ser10mbuffer_style.js"></script><script src="styles/Ser2mbuffer_style.js"></script><script src="styles/Ser_style.js"></script><script src="styles/Jordforureningvidenniveau2V2_style.js"></script><script src="styles/Jordforureningvidenniveau1V1_style.js"></script><script src="styles/HabitatOmrde_style.js"></script><script src="styles/Frededeomrder_style.js"></script><script src="styles/EngeogMoser18701899_style.js"></script><script src="styles/Gammelkystlinje18701899_style.js"></script><script src="styles/Ingenkloakering_style.js"></script><script src="styles/Dragr_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
+    </body>
+</html>
