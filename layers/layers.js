@@ -269,7 +269,7 @@ var lyr_IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_1
     <img src="styles/legend/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_3.png" /> 60000 - 80000<br />\
     <img src="styles/legend/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_4.png" /> 80000 - 100000<br />\
     <img src="styles/legend/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_5.png" /> 100000 - 120000<br />\
-    <img src="styles/legend/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_6.png" /> 120000 - 47624000<br />' });
+    <img src="styles/legend/IndledendeskadesberegningerGennemsnitligskadesomkostningerfrtiltagDKKr_16_6.png" /> 120000 +<br />' });
 var format_Vandlb100mbuffer = new ol.format.GeoJSON();
 var features_Vandlb100mbuffer = format_Vandlb100mbuffer.readFeatures(json_Vandlb100mbuffer, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -777,4 +777,5 @@ lyr_Ingenkloakering.set('fieldLabels', {'fid': 'no label', 'doklink': 'no label'
 lyr_Dragr.set('fieldLabels', {'fid': 'no label', 'navn': 'no label', });
 lyr_Dragr.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
+
 });
